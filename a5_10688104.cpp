@@ -6,8 +6,8 @@ int main()
 {
     int id[5], age[5], i;
     string name[100];
-    char a, gender[5], grade[5];
-    float score[5];
+    char gender[5], grade[5];
+    float score[5], a = 0.0, sc = 0.0;
 
 
     for (i = 1; i <= 5; i++)
@@ -25,6 +25,8 @@ int main()
         cout<<"Enter student"<<i<<" grade: ";
         cin>>grade[i];
         cout<<"\n";
+        a +=age[i];
+        sc += score[i];
     }
 
 
@@ -35,5 +37,6 @@ int main()
     {
         std<<id[j]<<"\t\t"<<name[j]<<"\t\t"<<age[j]<<"\t\t"<<gender[j]<<"\t\t"<<score[j]<<"\t\t"<<grade[j]<<endl;
     }
+    std<<"\nAverage age: "<<a/5<<"\nAverage score: "<<sc/5;
     return 0;
 }
